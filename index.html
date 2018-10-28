@@ -34,7 +34,7 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h1>Crafting Web Comics With Ember</h1>
+					<h1 style="padding-top: 1.3em;">Crafting Web Comics With Ember</h1>
 					<small class="right" style="font-style: italic; float: right; margin-top: 2em;"><a href="https://twitter.com/jjordan_dev" target="react-comp-blogpost">
 						<img src="./lib/img/logos/twitter-white.png" alt="Twitter Logo" style="height: 30px; width: 30px; position: relative; top: -13px; margin-right: 0.2em;"/>@jjordan_dev</a></small>
 				</section>
@@ -99,7 +99,7 @@
               <h2>You can do it, too!</h2>
 							<p><img class="shadowed" height="500" src="./lib/img/drawing.gif" alt="Web Comics One Step Away"/></p>
 					</section>
-					<section data-background-image="./lib/img/anatomy.jpeg">
+					<section data-background-image="./lib/img/anatomy.jpeg" style="padding-bottom: 6em;">
 						  <div class="fragment fade-up color-box">
                 <h1>Anatomy of a Comic</h1>
 						  </div>
@@ -529,6 +529,7 @@ export default Component.extend(InViewportMixin, {
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				center: true,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
