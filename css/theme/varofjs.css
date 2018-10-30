@@ -3,12 +3,13 @@ html {
   background-color: #222222; }
 
 body {
-  background-image: url("./../../lib/img/cross.svg");
+  background: linear-gradient(0.7turn, #011F4B, #303f9f, #4a148c);
+  /* background-image: url('./../../lib/img/cross.svg');
   background-attachment: scroll;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgba(200, 80, 200, 0.6);
-  background-position: center center; }
+  background-position: center center; */ }
 
 * {
   box-sizing: border-box; }
