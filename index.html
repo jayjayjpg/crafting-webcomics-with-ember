@@ -498,12 +498,180 @@ export default Component.extend(InViewportMixin, {
 <section class="panel-section">
   <iframe id="inlineFrameExample" title="Loading via iframe" src="https://jessica-jordan.github.io/diamanias/#/chapters/1"></iframe>
 </section>
+<section>
+  <h1 class="fragment fade-up">🤔</h1>
+	<h2 class="fragment fade-up">Who's gonna try to read it anyway?</h2>
+</section>
+<section>
+	<div class="row">
+	  <div class="col col-12"><img src="./lib/img/voiceover.png" height="300" alt="voice over screenshot" /></div>
+		<p class="fragment fade-up">Audience includes users of <strong>assistive technologies</strong></p>
+  </div>
+</section>
+<section class="panel-section">
+	<article style="display: flex; align-items: center;">
+		<div class="border-wrapper fragment fade-up">
+			<h2>Integrating Text</h2>
+			<div class="row">
+				<div class="fragment fade-up col col-12">
+					<div style="flex: 1; height: 0.5em;">
+						<h4 class="speech-bubble">HTML makes comic prose accessible by default</h4>
+					</div>
+				</div>
+				<div class="fragment fade-up col col-12 bordered">
+				<pre class="html" style="width: 30em; margin: 0 auto;"><code>
+<article class="comic-panel">
+  <p class="speech-bubble">
+    HTML makes comic prose accessible
+    by default!
+  </p>
+</article>
+</code></pre>
+</div>
+			</div>
+		</div>
+	</article>
+</section>
+<section class="panel-section">
+	<article>
+		<div class="border-wrapper fragment fade-up">
+			<div class="row">
+					<h4>Describing Illustrated Content</h4>
+					<div class="fragment fade-up col col-12" style="padding-bottom: 0.5em;"><img class="bordered img-bordered" src="./lib/img/anima.gif" alt="Example Panel, Person in boat on the sea" height="200" /></div>
+					<div class="fragment fade-up col col-12" style="text-align: center;">
+						<pre class="html" style="width: 40em; margin: 0 auto; font-size: 0.5em;"><code><!-- Describe background images with role & aria-label --></code></pre>
+						<pre class="html" style="width: 60em; margin: 0 auto; font-size: 0.35em;"><code><div class="comic-panel"
+	role="img"
+  aria-label="The person is turning their head"></div>
+	</code></pre>
+					</div>
+			</div>
+		</div>
+  </article>
+</section>
+<section data-background-color="#222222">
+		<div class="row bordered">
+		<h3>Easy Aria Attributes in Ember</h3>
+		<div class="row" style="position: relative;">
+			<div class="col col-12 col-less-tall">
+<div class="fragment fade-in fade-out fade-multiple wide">
+<pre class="javascript"><code>// app/components/comic-panel.js
+import Component from '@ember/component';
+
+export default Component.extend({
+  attributeBindings: ['ariaLabel:aria-label', 'role'],
+  // ...
+});
+</code></pre>
+</div>
+</div>
+<div class="fragment fade-in fade-out fade-multiple wide">
+<pre class="javascript"><code class="large">{{! app/templates/chapter.hbs }}
+
+{{comic-panel
+  ariaLabel="A person rowing at sea"
+  role="img"}}
+</code></pre>
+</div>
+<div class="fragment fade-in fade-out fade-multiple wide">
+<pre class="javascript"><code class="large">{{! app/templates/chapter.hbs }}
+
+&lt;ComicPanel
+  aria-label="A person rowing at sea"
+  role="img"/&gt;
+
+{{! AngleBracket Components since Ember 3.4}}
+</code></pre>
+</div>
+</div>
+<div class="row fragment fade-up">
+	<small class="small-title"><a href="https://github.com/emberjs/rfcs/blob/master/text/0311-angle-bracket-invocation.md">RFC#311: Angle Bracket Components</a></small>
+</div>
+</div>
+</section>
+<section>
+	<h3>The "Pokemon Shock" Incident</h3>
+  <div class="row">
+    <div class="col col-6 fragment fade-up">
+      <img class="shadowed" height="200" src="./lib/img/pokemonshock1.jpeg" alt="Pokemon Photoinsensitive Scene Frame 1"/>
+		</div>
+		<div class="col col-6 fragment fade-up">
+			<img class="shadowed" height="200" src="./lib/img/pokemonshock2.jpeg" alt="Pokemon Photoinsensitive Scene Frame 1"/>
+		</div>
+	</div>
+	<div class="row fragment fade-up">
+		<small class="small-title"><a href="https://en.wikipedia.org/wiki/Denn%C5%8D_Senshi_Porygon">Wikipedia: Banned Pokemon Episode "Denno Senshi Porygon" (1997)</a></small>
+	</div>
+</section>
+<section class="panel-section">
+	<article class="fade-up fragment">
+		<h3>More Requirements for Accessible UX</h3>
+		<ul style="display: flex; flex-direction: column; justify-content: center; list-style: none;">
+	    <li class="fragment fade-up">Safety measures for photosensitive users</li>
+			<li class="fragment fade-up">Keyboard accessibility</li>
+			<li class="fragment fade-up">Give user control over animation settings (e.g. opt-in to autoplay)</li>
+		</ul>
+  </article>
+</section>
+<section data-background-image="./lib/img/berlinetta.jpeg">
+	<div class="fragment fade-up color-box">
+		<h1>Animation Performance</h1>
+	</div>
+</section>
+<section>
+  <h3>Don't sweat it!</h3>
+	<p class="fragment fade-up">Abstain from over-optimizing</p>
+	<p class="fragment fade-up">...optimize real jank in your app instead</p>
+</section>
+<section>
+  <h3>Knowing The Browser's Workload</h3>
+	<div class="row">
+		<div class="col col-6">
+			<p class="fragment fade-up">Some CSS properties are "cheap" to animate</p>
+			<p class="fragment fade-up">...others not so much: e.g. top, left, bottom, right</p>
+		</div>
+		<div class="col col-6">
+			<p class="fragment fade-up"><img class="shadowed" height="220" src="./lib/img/csstriggers.png" alt="CSS triggers"/></p>
+		</div>
+	</div>
+	<div class="row fragment fade-up">
+		<small class="small-title"><a href="https://csstriggers.com/">List of CSS properties and their impact on render performance</a></small>
+	</div>
+</p>
+</section>
+<section>
+  <h3>Performance Dreams of the Future</h3>
+	<p class="fragment fade-up">Loading heavy animation work off the main thread with Animation Worklet API</p>
+</section>
+<section data-background-color="#222222">
+	<div class="fragment fade-up">
+		<div class="row">
+			<h3>Animation Worklet API</h3>
+			<pre class="javascript"><code>CSS.animationWorklet.addModule("scroll-animator.js")
+.then(() => {
+  let animation = new WorkletAnimation(
+    'scrollanimation',
+    new KeyframeEffect(
+      document.querySelector(`#squarer${num}`),
+      keyframes,
+      options,
+    ),
+    document.timeline, // new ScrollTimeline(scrollSource),
+  );
+  animation.play();
+});
+</code></pre>
+<small class="small-title fragment fade-up"><a href="https://wicg.github.io/animation-worklet/">Web Platform Incubator Community Group: Animation Worklet API Draft</a></small>
+		</div>
+	</div>
+</section>
 <section class="panel-section" data-background-image="./lib/img/popart.jpeg">
 	<article class="fade-up fragment">
 		<ul style="height: 100%; display: flex; flex-direction: column; justify-content: center; list-style: none;">
 	    <li class="fragment fade-up">Comics are going online</li>
-			<li class="fragment fade-up">The Web provides new freedom to form &amp; layout of comics</li>
+			<li class="fragment fade-up">New freedom to form &amp; layout of comics</li>
 			<li class="fragment fade-up">Native Web APIs for immersive art ❤️</li>
+			<li class="fragment fade-up">Powerful tools for making comics accessible online</li>
 			<li class="fragment fade-up">Frameworks &amp; JS libraries for intuitive UX</li>
 		</ul>
   </article>

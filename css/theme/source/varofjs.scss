@@ -217,6 +217,23 @@ img {
        }
      }
 
+     h4.speech-bubble {
+       display: block;
+       background-image: url('./../../lib/img/speechbubb.png');
+       background-attachment: scroll;
+       background-position: center center;
+       background-repeat: no-repeat;
+       height: 12em;
+       padding: 3em 0.5em 0;
+       width: 12em;
+       background-size: cover;
+       font-size: 0.5em !important;
+       color: $black;
+       right: 2em;
+       bottom: -5em;
+       position: absolute;
+     }
+
       .fragment {
         &.fade-multiple {
           position: absolute;
@@ -442,6 +459,8 @@ img {
     }
   }
 }
+
+
 @import url('https://fonts.googleapis.com/css?family=Raleway:500,800');
 
 /* .reveal .slides section .fragment.fade-out.fade-multiple.visible {

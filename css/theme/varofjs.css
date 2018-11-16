@@ -141,6 +141,22 @@ img.fill {
   font-style: italic;
   margin-top: 0.5em; }
 
+.reveal .slides section h4.speech-bubble {
+  display: block;
+  background-image: url("./../../lib/img/speechbubb.png");
+  background-attachment: scroll;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 12em;
+  padding: 3em 0.5em 0;
+  width: 12em;
+  background-size: cover;
+  font-size: 0.5em !important;
+  color: #222222;
+  right: 2em;
+  bottom: -5em;
+  position: absolute; }
+
 .reveal .slides section .fragment.fade-multiple {
   position: absolute;
   top: 0;
