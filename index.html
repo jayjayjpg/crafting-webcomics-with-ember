@@ -73,9 +73,23 @@
 				<section data-background-image="./lib/img/comicbooks.jpeg">
 
 				</section>
-				<section data-background-image="./lib/img/sm-1.jpeg">
+				<section data-background-image="./lib/img/comicbooks-2.jpg">
 
-					<small style="margin-top: 25em;" class="small-title light"><a class="light" href="https://www.imdb.com/name/nm0847603/">Sailor Moon Series by Naoko Takeuchi</a></small>
+					<small style="margin-top: 25em; background-color: rgba(255,255,255,0.7); border-radius: 4px; padding: 1em 2em;" class="small-title light"><a class="light" href="https://www.imdb.com/name/nm0847603/">Sailor Moon Manga Series by Naoko Takeuchi</a></small>
+				</section>
+				<section>
+					<h2>A History of Print Comics</h2>
+					<div class="row" style="display: flex; align-items: center;">
+						<div class="fragment fade-up col col-6"><img class="shadowed" src="./lib/img/glasgow.jpg" alt="Glasgow Looking Glass - presumably first comic strip printed"/></div>
+						<div class="fragment fade-up col col-6"><p><a href="http://special.lib.gla.ac.uk/exhibns/month/june2005.html" target="glasgow">The Glasgow Looking Glass (1826)</a></p></div>
+					</div>
+				</section>
+				<section>
+					<h2>A History of Print Comics</h2>
+					<div class="row" style="display: flex; align-items: center;">
+						<div class="fragment fade-up col col-6"><img class="shadowed" src="./lib/img/hokusai.jpg" alt="Hokusai series - one of the first manga books published in Japan"/></div>
+						<div class="fragment fade-up col col-6"><p><a href="http://pulverer.si.edu/node/663/title" target="hokusai">北斎漫画 (Hokusai's Sketches - 1814)</a></p></div>
+					</div>
 				</section>
 					<section class="panel-section">
 						<article class="fragment fade-up">
@@ -83,7 +97,7 @@
 								<div class="fragment fade-up col col-4 emoji-large">📙</div>
 								<div class="fragment fade-up col col-4 center"><div class="centered" style="position: relative; left: 3em; top: 3.5em;"><div class="arrow arrow--right"></div></div></div>
 								<div class="fragment fade-up col col-4 emoji-large">🌐</div>
-								<h3>2018: Comics Go Web!</h3>
+								<h3>1990s -> Comics Go Web!</h3>
 						  </div>
 					  </article>
 					</section>
@@ -169,7 +183,7 @@ import Route from '@ember/routing/route';
 
 export default Route.extend({
   model(params) {
-    return this.get('store').find('chapter', params.id);
+    return this.store.find('chapter', params.id);
   },
 });</code></pre>
 	</div>
@@ -554,7 +568,7 @@ export default Component.extend(InViewportMixin, {
 		<h3>Easy Aria Attributes in Ember</h3>
 		<div class="row" style="position: relative;">
 			<div class="col col-12 col-less-tall">
-<div class="fragment fade-in fade-out fade-multiple wide">
+<!-- <div class="fragment fade-in fade-out fade-multiple wide">
 <pre class="javascript"><code>// app/components/comic-panel.js
 import Component from '@ember/component';
 
@@ -572,7 +586,7 @@ export default Component.extend({
   ariaLabel="A person rowing at sea"
   role="img"}}
 </code></pre>
-</div>
+</div> -->
 <div class="fragment fade-in fade-out fade-multiple wide">
 <pre class="javascript"><code class="large">{{! app/templates/chapter.hbs }}
 
