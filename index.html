@@ -92,12 +92,10 @@
 					</div>
 				</section>
 					<section class="panel-section">
-						<article class="fragment fade-up">
+						<article>
 							<div class="row">
-								<div class="fragment fade-up col col-4 emoji-large">📙</div>
-								<div class="fragment fade-up col col-4 center"><div class="centered" style="position: relative; left: 3em; top: 3.5em;"><div class="arrow arrow--right"></div></div></div>
-								<div class="fragment fade-up col col-4 emoji-large">🌐</div>
-								<h3>1990s -> Comics Go Web!</h3>
+								<h2>1990s -> Comics Go Web!</h2>
+                <p class="emoji emoji-large large" style="margin-top: 1em;">🌐</p>
 						  </div>
 					  </article>
 					</section>
@@ -118,14 +116,14 @@
                 <h1>Anatomy of a Comic</h1>
 						  </div>
 					</section>
-					<section>
+					<!-- <section>
               <h2>Anatomy of a Comic</h2>
 							<div class="row" style="display: flex; align-items: center;">
 								<div class="fragment fade-up col col-4"><img class="shadowed" src="./lib/img/flipping.gif" alt="Book flipping pages"/></div>
 								<div class="fragment fade-up col col-4" style="background-color: #ffffff;"><img class="shadowed" src="./lib/img/panels.png" alt="Comic Panels"/></div>
 								<div class="fragment fade-up col col-4"><img class="shadowed" height="400" src="./lib/img/batguy-sprite-3.png" alt="Racoon Batman Crossover Character"/></div>
 							</div>
-					</section>
+					</section> -->
 					<section class="panel-section">
 						<article>
 						<div class="border-wrapper">
@@ -168,11 +166,11 @@ export default Router;</code></pre>
 							</div>
 						</div>
 					</section>
-					<section>
+					<!-- <section>
 						<img class="bordered img-bordered" src="./lib/img/embernew.gif" height="350" alt="Ember new...." />
 						<p class="fragment fade-up">1 command = View Library + Data Layer + Test Suite...</p>
 						<p class="fragment fade-up">... + Routing Solution</p>
-					</section>
+					</section> -->
 					<section data-background-color="#222222">
 						<div class="row">
 							<h3>Defining Pages as Routes</h3>
@@ -252,15 +250,17 @@ export default Route.extend({
 						<article style="display: flex; align-items: center;">
 							<div class="border-wrapper fragment fade-up">
 								<h3>Motion through Sequence</h3>
-								<div class="row">
-										<div class="fragment fade-up col col-6"><img class="bordered img-bordered" src="./lib/img/panel2.png"  alt="Example Panel, Person in boat on the sea" /></div>
-										<div class="fragment fade-up col col-6"><img class="bordered img-bordered" src="./lib/img/panel3.png"  alt="Example Panel, Person in boat on the sea" /></div>
+								<div class="row" style="position: relative;">
+										<div class="fragment fade-up col col-6" style="padding: .3em;"><img class="bordered img-bordered" src="./lib/img/panel2.png"  alt="Example Panel, Person in boat on the sea" /></div>
+										<div class="fragment fade-up col col-6" style="padding: .3em;"><img class="bordered img-bordered" src="./lib/img/panel3.png"  alt="Example Panel, Person in boat on the sea" /></div>
+										<div class="fragment fade-up col col-4 center"><div class="centered" style="position: absolute; left: 0em; top: -6em;"><div class="arrow arrow--right"></div><div style="position: relative; left: -1em; top: 2.5em; font-size: 2em;">🧠💭</div></div></div>
 								</div>
 							</div>
 					  </article>
 					</section>
-					<section data-background-image="./lib/img/internet.svg">
-            <p class="emoji-large fragment fade-up">🎨</p>
+					<section>
+						<img class="bordered img-bordered" src="./lib/img/paintingg.gif" height="400" alt="An old man and a dog painting on a canvas together" />
+            <p class="fragment fade-up">Let's use the web and be creative 🎨</p>
 					</section>
 					<section>
             <p><iframe width="1431" height="540" src="https://www.youtube.com/embed/n0O7M1fsWbY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
@@ -534,7 +534,7 @@ export default Component.extend(InViewportMixin, {
 						</div>
 					</section>
 <section class="panel-section">
-  <iframe id="inlineFrameExample" title="Loading via iframe" src="https://jessica-jordan.github.io/diamanias/#/chapters/1"></iframe>
+  <iframe id="inlineFrameExample" title="Loading via iframe" src="http://localhost:4200/chapters/1"></iframe>
 </section>
 <section>
   <h1 class="fragment fade-up">🤔</h1>
@@ -543,7 +543,7 @@ export default Component.extend(InViewportMixin, {
 <section>
 	<div class="row">
 	  <div class="col col-12"><img src="./lib/img/voiceover.png" height="300" alt="voice over screenshot" /></div>
-		<p class="fragment fade-up">Audience includes users of <strong>assistive technologies</strong></p>
+		<p class="fragment fade-up">Almost anyone including users of <strong>assistive technologies</strong></p>
   </div>
 </section>
 <section class="panel-section">
@@ -578,9 +578,9 @@ export default Component.extend(InViewportMixin, {
 					<div class="fragment fade-up col col-12" style="padding-bottom: 0.5em;"><img class="bordered img-bordered" src="./lib/img/anima.gif" alt="Example Panel, Person in boat on the sea" height="200" /></div>
 					<div class="fragment fade-up col col-12" style="text-align: center;">
 						<pre class="html" style="width: 40em; margin: 0 auto; font-size: 0.5em;"><code><!-- Describe background images with role & aria-label --></code></pre>
-						<pre class="html" style="width: 60em; margin: 0 auto; font-size: 0.35em;"><code><div class="comic-panel"
-	role="img"
-  aria-label="The person is turning their head"></div>
+						<pre class="html" style="width: 60em; margin: 0 auto; font-size: 0.35em;"><code><article class="comic-panel">
+  <span role="img" aria-label="There is a cat sitting in the window."></span>
+</article>
 	</code></pre>
 					</div>
 			</div>
@@ -591,38 +591,16 @@ export default Component.extend(InViewportMixin, {
 		<div class="row bordered">
 		<h3>Easy Aria Attributes in Ember</h3>
 		<div class="row" style="position: relative;">
-			<div class="col col-12 col-less-tall">
-<!-- <div class="fragment fade-in fade-out fade-multiple wide">
-<pre class="javascript"><code>// app/components/comic-panel.js
-import Component from '@ember/component';
-
-export default Component.extend({
-  attributeBindings: ['ariaLabel:aria-label', 'role'],
-  // ...
-});
-</code></pre>
-</div>
-</div>
-<div class="fragment fade-in fade-out fade-multiple wide">
-<pre class="javascript"><code class="large">{{! app/templates/chapter.hbs }}
-
-{{comic-panel
-  ariaLabel="A person rowing at sea"
-  role="img"}}
-</code></pre>
-</div> -->
-<div class="fragment fade-in fade-out fade-multiple wide">
+      <div class="fragment fade-up col col-12">
 <pre class="javascript"><code class="large">{{! app/templates/chapter.hbs }}
 
 &lt;ComicPanel
-  aria-label="A person rowing at sea"
-  role="img"/&gt;
-
-{{! AngleBracket Components since Ember 3.4}}
+  role="img"
+  aria-label="There is a yawning cat."/&gt;
 </code></pre>
+  </div>
 </div>
-</div>
-<div class="row fragment fade-up">
+<div class="row">
 	<small class="small-title"><a href="https://github.com/emberjs/rfcs/blob/master/text/0311-angle-bracket-invocation.md">RFC#311: Angle Bracket Components</a></small>
 </div>
 </div>
@@ -719,11 +697,21 @@ export default Component.extend({
 	<div id="start-typing" class="fragment fade-up"></div>
 </section>
 <section>
-	<h1>Thank you! ✨✨✨</h1>
-	<small class="right" style="font-style: italic; float: right; margin-top: 2em;"><a href="https://twitter.com/jjordan_dev" target="react-comp-blogpost">
-		<img src="./lib/img/logos/twitter.png" alt="Twitter Logo" style="height: 30px; width: 30px; position: relative; top: -13px;"/>@jjordan_dev</a></small>
+	<div class="row">
+	<div class="col col-6">
+			<p class="fragment fade-up" style="background-color: rgba(255,255,255,0.8); padding: .6em; border-radius: 8px;"><img height="55" src="./lib/img/logos/simplabs.gif" alt="simplabs logo"></p>
+	</div>
+	<div class="col col-6">
+		<p class="fragment fade-up" style="top: .8em; position: relative;"><a href="https://the-emberjs-times.ongoodbits.com/" target="embertimes" style="margin-top: 1em;"><img src="./lib/img/logos/embertimes.png" alt="Ember Times Logo" height="80"></a></p>
+  </div>
+  </div>
+	<div class="row center centered">
+		<p class="fragment fade-up"><a style="display: flex; align-items: center; justify-content: center;" href="https://www.meetup.com/Ember-js-Berlin/" target="meeetup"><img style="margin-right: 0.5em;" src="./lib/img/emberliner.jpeg" alt="Ember Berlin Meetup" height="100">Ember Berlin Meetup</a></p>
+	</div>
+	<h1 class="fragment fade-up">Thank you! ✨</h1>
+	<small class="right" style="font-style: italic; float: right; margin-top: .5em;"><a href="https://twitter.com/jjordan_dev" target="react-comp-blogpost">
+		<img src="./lib/img/logos/twitter-white.png" alt="Twitter Logo" style="height: 30px; width: 30px; position: relative; top: -13px; margin-right: 0.2em;"/>@jjordan_dev</a></small>
 </section>
-			  <!-- </section> -->
 			</div>
 		</div>
 
@@ -736,6 +724,7 @@ export default Component.extend({
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 				center: true,
+				autoPlayMedia: true,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
